@@ -13,19 +13,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var date = Date()
-        print(date.zz_stringWithDateFormat(format: "yyyy/MM/dd HH:mm"))
+        let testView = view.zz_add(subview: TestView.zz_loadFromNib()!)
+        testView.frame = CGRect(x: 30, y: 30, width: 100, height: 100)
+        testView.backgroundColor = UIColor.red
         
-        // Date 添加了 + - += -= 高级运输费用于处理时间
-        date -= 3600
+        testView.zz_setCircle()
         
-        // 还添加了 > < 用于比较时间
+        testView.zz_setBorder(color: UIColor.gray, width: 0.5)
         
-        print(date.zz_stringWithDateFormat(format: "yyyy/MM/dd HH:mm"))
-        
-        print(Date.distantPast)
+        print(testView.zz_controller)
     }
 
+    
+    
 
 }
 

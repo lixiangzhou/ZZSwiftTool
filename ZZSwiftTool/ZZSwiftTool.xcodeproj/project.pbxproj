@@ -17,6 +17,9 @@
 		9773D3601E72587F00743C3F /* Date+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D35F1E72587F00743C3F /* Date+ZZExtension.swift */; };
 		9773D3621E7258E800743C3F /* DateFormatter+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3611E7258E800743C3F /* DateFormatter+ZZExtension.swift */; };
 		9773D3641E725B5100743C3F /* String+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3631E725B5100743C3F /* String+ZZExtension.swift */; };
+		9773D3661E725C6C00743C3F /* UIView+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3651E725C6C00743C3F /* UIView+ZZExtension.swift */; };
+		9773D3681E72639F00743C3F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3671E72639F00743C3F /* TestView.swift */; };
+		9773D36A1E7263AA00743C3F /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9773D3691E7263AA00743C3F /* TestView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		9773D35F1E72587F00743C3F /* Date+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ZZExtension.swift"; sourceTree = "<group>"; };
 		9773D3611E7258E800743C3F /* DateFormatter+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ZZExtension.swift"; sourceTree = "<group>"; };
 		9773D3631E725B5100743C3F /* String+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ZZExtension.swift"; sourceTree = "<group>"; };
+		9773D3651E725C6C00743C3F /* UIView+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ZZExtension.swift"; sourceTree = "<group>"; };
+		9773D3671E72639F00743C3F /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		9773D3691E7263AA00743C3F /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,8 @@
 				9773D3501E724DEB00743C3F /* ZZExtension */,
 				9773D33E1E724D4000743C3F /* AppDelegate.swift */,
 				9773D3401E724D4000743C3F /* ViewController.swift */,
+				9773D3671E72639F00743C3F /* TestView.swift */,
+				9773D3691E7263AA00743C3F /* TestView.xib */,
 				9773D3421E724D4000743C3F /* Main.storyboard */,
 				9773D3451E724D4000743C3F /* Assets.xcassets */,
 				9773D3471E724D4000743C3F /* LaunchScreen.storyboard */,
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				9773D3531E724E2F00743C3F /* UISceen+ZZExtension.swift */,
+				9773D3651E725C6C00743C3F /* UIView+ZZExtension.swift */,
 			);
 			path = ZZUIExtension;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9773D36A1E7263AA00743C3F /* TestView.xib in Resources */,
 				9773D3491E724D4000743C3F /* LaunchScreen.storyboard in Resources */,
 				9773D3461E724D4000743C3F /* Assets.xcassets in Resources */,
 				9773D3441E724D4000743C3F /* Main.storyboard in Resources */,
@@ -176,11 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9773D3661E725C6C00743C3F /* UIView+ZZExtension.swift in Sources */,
 				9773D3411E724D4000743C3F /* ViewController.swift in Sources */,
 				9773D3641E725B5100743C3F /* String+ZZExtension.swift in Sources */,
 				9773D33F1E724D4000743C3F /* AppDelegate.swift in Sources */,
 				9773D3621E7258E800743C3F /* DateFormatter+ZZExtension.swift in Sources */,
 				9773D3601E72587F00743C3F /* Date+ZZExtension.swift in Sources */,
+				9773D3681E72639F00743C3F /* TestView.swift in Sources */,
 				9773D35C1E7255DD00743C3F /* Calendar+ZZExtension.swift in Sources */,
 				9773D3541E724E2F00743C3F /* UISceen+ZZExtension.swift in Sources */,
 			);
