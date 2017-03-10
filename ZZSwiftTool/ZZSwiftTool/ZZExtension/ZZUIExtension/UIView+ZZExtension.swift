@@ -66,3 +66,19 @@ extension UIView {
         return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).last as? UIView
     }
 }
+
+extension UIView {
+    open func zz_snapshotImage() -> UIImage {
+        return zz_cropImage(inRect: bounds)
+    }
+    
+    /// allRect = CGRect.zero 表示bounds
+    open func zz_cropImage(inRect: CGRect) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0)
+        UIRectClip(inRect)
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
