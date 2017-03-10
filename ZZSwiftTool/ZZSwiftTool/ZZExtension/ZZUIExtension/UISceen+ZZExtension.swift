@@ -10,19 +10,19 @@ import UIKit
 
 extension UIScreen {
     
-    class var zz_height: CGFloat {
+    class open var zz_height: CGFloat {
         return UIScreen.main.bounds.height
     }
     
-    class var zz_width: CGFloat {
+    class open var zz_width: CGFloat {
         return UIScreen.main.bounds.width
     }
     
-    class var zz_scale: CGFloat {
+    class open var zz_scale: CGFloat {
         return UIScreen.main.scale
     }
     
-    class var zz_brightness: CGFloat {
+    class open var zz_brightness: CGFloat {
         set {
             UIScreen.main.brightness = newValue
         }

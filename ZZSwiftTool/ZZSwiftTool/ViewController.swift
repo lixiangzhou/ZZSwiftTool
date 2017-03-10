@@ -12,13 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        // 真机测试
-        UIScreen.zz_brightness = 0.5
+        var date = Date()
+        print(date.zz_stringWithDateFormat(format: "yyyy/MM/dd HH:mm"))
+        
+        // Date 添加了 + - += -= 高级运输费用于处理时间
+        date -= 3600
+        
+        // 还添加了 > < 用于比较时间
+        
+        print(date.zz_stringWithDateFormat(format: "yyyy/MM/dd HH:mm"))
+        
+        print(Date.distantPast)
     }
 
 
