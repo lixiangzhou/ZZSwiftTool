@@ -32,11 +32,13 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        testView.zz_cropImage(inRect: CGRect(origin: CGPoint.zero, size: testView.bounds.size * 1)) { (image) in
-//            try? UIImagePNGRepresentation(image)?.write(to: URL(fileURLWithPath: "/Users/lixiangzhou/Desktop/A.png"))
-//        }
-        
-        try? UIImagePNGRepresentation(testView.zz_cropImage(inRect: CGRect(x: 0, y: 0, width: 50, height: 50)))?.write(to: URL(fileURLWithPath: "/Users/lixiangzhou/Desktop/AA.png"))
+        _ = UIAlertController.zz_show(fromController: self, style: .alert, title: "Test", message: "Message", action1Title: "t1", action1Handler: { (_) in
+            print("act1")
+            }, action2Title: "t2", action2Handler: { (_) in
+                print("act2")
+            }) { 
+                print("finished")
+        }
     }
     
     

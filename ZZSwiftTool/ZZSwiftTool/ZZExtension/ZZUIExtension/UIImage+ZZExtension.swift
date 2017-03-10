@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImage {
-    func zz_crop(inRect: CGRect) -> UIImage? {
+    open func zz_crop(inRect: CGRect) -> UIImage? {
         let scale = UIScreen.zz_scale
         let dotRect = CGRect(x: inRect.zz_x * scale, y: inRect.zz_y * scale, width: inRect.width * scale, height: inRect.height * scale)
         

@@ -22,6 +22,7 @@
 		9773D36A1E7263AA00743C3F /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9773D3691E7263AA00743C3F /* TestView.xib */; };
 		9773D3701E72784500743C3F /* CGRect+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D36F1E72784500743C3F /* CGRect+ZZExtension.swift */; };
 		9773D3721E7288ED00743C3F /* UIImage+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3711E7288ED00743C3F /* UIImage+ZZExtension.swift */; };
+		9773D3741E728F5600743C3F /* UIAlertController+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3731E728F5600743C3F /* UIAlertController+ZZExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9773D3691E7263AA00743C3F /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		9773D36F1E72784500743C3F /* CGRect+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+ZZExtension.swift"; sourceTree = "<group>"; };
 		9773D3711E7288ED00743C3F /* UIImage+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ZZExtension.swift"; sourceTree = "<group>"; };
+		9773D3731E728F5600743C3F /* UIAlertController+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ZZExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				9773D35F1E72587F00743C3F /* Date+ZZExtension.swift */,
 				9773D3631E725B5100743C3F /* String+ZZExtension.swift */,
 				9773D36F1E72784500743C3F /* CGRect+ZZExtension.swift */,
+				9773D3731E728F5600743C3F /* UIAlertController+ZZExtension.swift */,
 			);
 			path = ZZNSExtension;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9773D3741E728F5600743C3F /* UIAlertController+ZZExtension.swift in Sources */,
 				9773D3661E725C6C00743C3F /* UIView+ZZExtension.swift in Sources */,
 				9773D3411E724D4000743C3F /* ViewController.swift in Sources */,
 				9773D3641E725B5100743C3F /* String+ZZExtension.swift in Sources */,
