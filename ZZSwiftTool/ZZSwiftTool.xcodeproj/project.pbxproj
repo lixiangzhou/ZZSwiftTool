@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9713AC671E7580C1004ABDD1 /* NSObject+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC661E7580C1004ABDD1 /* NSObject+ZZExtension.swift */; };
+		9713AC691E758161004ABDD1 /* UIButton+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC681E758161004ABDD1 /* UIButton+ZZExtension.swift */; };
 		9773D33F1E724D4000743C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D33E1E724D4000743C3F /* AppDelegate.swift */; };
 		9773D3411E724D4000743C3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3401E724D4000743C3F /* ViewController.swift */; };
 		9773D3441E724D4000743C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9773D3421E724D4000743C3F /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		9713AC661E7580C1004ABDD1 /* NSObject+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ZZExtension.swift"; sourceTree = "<group>"; };
+		9713AC681E758161004ABDD1 /* UIButton+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+ZZExtension.swift"; sourceTree = "<group>"; };
 		9773D33B1E724D4000743C3F /* ZZSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9773D33E1E724D4000743C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9773D3401E724D4000743C3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				9773D3531E724E2F00743C3F /* UISceen+ZZExtension.swift */,
 				9773D3651E725C6C00743C3F /* UIView+ZZExtension.swift */,
 				9773D3711E7288ED00743C3F /* UIImage+ZZExtension.swift */,
+				9713AC681E758161004ABDD1 /* UIButton+ZZExtension.swift */,
 			);
 			path = ZZUIExtension;
 			sourceTree = "<group>";
@@ -159,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = lixiangzhou;
 				TargetAttributes = {
 					9773D33A1E724D4000743C3F = {
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9773D3741E728F5600743C3F /* UIAlertController+ZZExtension.swift in Sources */,
+				9713AC691E758161004ABDD1 /* UIButton+ZZExtension.swift in Sources */,
 				9773D3661E725C6C00743C3F /* UIView+ZZExtension.swift in Sources */,
 				9773D3411E724D4000743C3F /* ViewController.swift in Sources */,
 				9773D3641E725B5100743C3F /* String+ZZExtension.swift in Sources */,
@@ -262,6 +266,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -312,6 +317,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
