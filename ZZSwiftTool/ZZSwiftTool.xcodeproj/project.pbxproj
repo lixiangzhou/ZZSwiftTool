@@ -12,6 +12,7 @@
 		9713AC6B1E758267004ABDD1 /* UIColor+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC6A1E758267004ABDD1 /* UIColor+ZZExtension.swift */; };
 		9713AC6D1E7584D3004ABDD1 /* UILabel+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC6C1E7584D3004ABDD1 /* UILabel+ZZExtension.swift */; };
 		9713AC6F1E75869C004ABDD1 /* UIImageView+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC6E1E75869C004ABDD1 /* UIImageView+ZZExtension.swift */; };
+		9713AC711E758726004ABDD1 /* ZZButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC701E758726004ABDD1 /* ZZButton.swift */; };
 		9773D33F1E724D4000743C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D33E1E724D4000743C3F /* AppDelegate.swift */; };
 		9773D3411E724D4000743C3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773D3401E724D4000743C3F /* ViewController.swift */; };
 		9773D3441E724D4000743C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9773D3421E724D4000743C3F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		9713AC6A1E758267004ABDD1 /* UIColor+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZZExtension.swift"; sourceTree = "<group>"; };
 		9713AC6C1E7584D3004ABDD1 /* UILabel+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+ZZExtension.swift"; sourceTree = "<group>"; };
 		9713AC6E1E75869C004ABDD1 /* UIImageView+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ZZExtension.swift"; sourceTree = "<group>"; };
+		9713AC701E758726004ABDD1 /* ZZButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZButton.swift; sourceTree = "<group>"; };
 		9773D33B1E724D4000743C3F /* ZZSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9773D33E1E724D4000743C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9773D3401E724D4000743C3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		9713AC651E758059004ABDD1 /* ZZCustom */ = {
 			isa = PBXGroup;
 			children = (
+				9713AC701E758726004ABDD1 /* ZZButton.swift */,
 			);
 			path = ZZCustom;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				9713AC6B1E758267004ABDD1 /* UIColor+ZZExtension.swift in Sources */,
 				9773D3641E725B5100743C3F /* String+ZZExtension.swift in Sources */,
 				9773D3701E72784500743C3F /* CGRect+ZZExtension.swift in Sources */,
+				9713AC711E758726004ABDD1 /* ZZButton.swift in Sources */,
 				9773D3721E7288ED00743C3F /* UIImage+ZZExtension.swift in Sources */,
 				9773D33F1E724D4000743C3F /* AppDelegate.swift in Sources */,
 				9773D3621E7258E800743C3F /* DateFormatter+ZZExtension.swift in Sources */,
