@@ -18,13 +18,13 @@ extension NSObject {
 
 extension NSObject {
     
-    class func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
+    open class func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
         let model = self.init()
         model.setValuesForKeys(dict)
         return model
     }
     
-    class func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
+    open class func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
         var models = [AnyObject]()
         
         for dict in dictArray {
@@ -35,7 +35,7 @@ extension NSObject {
         return models
     }
     
-    var zz_peopertyValues: [String: Any]? {
+    open var zz_peopertyValues: [String: Any]? {
         
         var propertyValues = [String : Any]()
         guard let properties = zz_properties else {
@@ -50,7 +50,7 @@ extension NSObject {
         return propertyValues.count == 0 ? nil : propertyValues
     }
     
-    var zz_properties: [String]? {
+    open var zz_properties: [String]? {
         var count: UInt32 = 0
         
         guard let properties = class_copyPropertyList(type(of: self), &count) else {
@@ -76,7 +76,7 @@ extension NSObject {
     }
     
     
-    func zz_printPeopertyValues() {
+    open func zz_printPeopertyValues() {
         guard let peopertyValues = zz_peopertyValues else{
             print("\(type(of: self)) 未找到属性值对")
             return
