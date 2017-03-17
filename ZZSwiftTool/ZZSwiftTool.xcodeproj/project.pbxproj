@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9704905E1E7BD5020032355B /* UITextField+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704905D1E7BD5020032355B /* UITextField+ZZExtension.swift */; };
 		9713AC671E7580C1004ABDD1 /* NSObject+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC661E7580C1004ABDD1 /* NSObject+ZZExtension.swift */; };
 		9713AC691E758161004ABDD1 /* UIButton+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC681E758161004ABDD1 /* UIButton+ZZExtension.swift */; };
 		9713AC6B1E758267004ABDD1 /* UIColor+ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713AC6A1E758267004ABDD1 /* UIColor+ZZExtension.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9704905D1E7BD5020032355B /* UITextField+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+ZZExtension.swift"; sourceTree = "<group>"; };
 		9713AC661E7580C1004ABDD1 /* NSObject+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ZZExtension.swift"; sourceTree = "<group>"; };
 		9713AC681E758161004ABDD1 /* UIButton+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+ZZExtension.swift"; sourceTree = "<group>"; };
 		9713AC6A1E758267004ABDD1 /* UIColor+ZZExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ZZExtension.swift"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				9713AC6A1E758267004ABDD1 /* UIColor+ZZExtension.swift */,
 				9713AC6C1E7584D3004ABDD1 /* UILabel+ZZExtension.swift */,
 				9713AC6E1E75869C004ABDD1 /* UIImageView+ZZExtension.swift */,
+				9704905D1E7BD5020032355B /* UITextField+ZZExtension.swift */,
 			);
 			path = ZZUIExtension;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				9773D3541E724E2F00743C3F /* UISceen+ZZExtension.swift in Sources */,
 				9713AC6D1E7584D3004ABDD1 /* UILabel+ZZExtension.swift in Sources */,
 				9713AC6F1E75869C004ABDD1 /* UIImageView+ZZExtension.swift in Sources */,
+				9704905E1E7BD5020032355B /* UITextField+ZZExtension.swift in Sources */,
 				9713AC671E7580C1004ABDD1 /* NSObject+ZZExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
