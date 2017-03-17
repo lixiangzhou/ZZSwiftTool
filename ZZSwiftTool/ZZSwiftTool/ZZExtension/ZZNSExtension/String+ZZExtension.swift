@@ -9,6 +9,12 @@
 import Foundation
 
 extension String {
+    
+    /// 根据格式获取字符串的Date对象
+    ///
+    /// - parameter format: 时间格式
+    ///
+    /// - returns: 指定格式的时间对象
     public func zz_dateWithFormat(format: String) -> Date? {
         zz_dateFormatter.dateFormat = format
         return zz_dateFormatter.date(from: self)

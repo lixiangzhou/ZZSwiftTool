@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIView {
+    
+    /// view所在的UIViewController
     open var zz_controller: UIViewController? {
         var responder = next
         while responder != nil {
@@ -20,6 +22,8 @@ extension UIView {
         return nil
     }
     
+    
+    /// 移除所有子控件
     open func zz_removeAllSubviews() {
         for subview in subviews {
             subview.removeFromSuperview()
@@ -39,6 +43,11 @@ extension UIView {
         layer.masksToBounds = masksToBounds
     }
     
+    
+    /// 设置边宽及颜色
+    ///
+    /// - parameter color: 边框颜色
+    /// - parameter width: 边框宽度
     open func zz_setBorder(color: UIColor, width: CGFloat) {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
@@ -46,12 +55,23 @@ extension UIView {
 }
 
 extension UIView {
+    
     /// 添加子控件
+    ///
+    /// - parameter subview: 子控件
+    ///
+    /// - returns: 添加的子控件
     open func zz_add(subview: UIView) -> UIView {
         return zz_add(subview: subview, frame: CGRect.zero)
     }
     
+    
     /// 添加子控件
+    ///
+    /// - parameter subview: 子控件
+    /// - parameter frame:   子控件的frame
+    ///
+    /// - returns: 添加的子控件
     open func zz_add(subview: UIView, frame: CGRect) -> UIView {
         addSubview(subview)
         subview.frame = frame
@@ -61,25 +81,35 @@ extension UIView {
 }
 
 extension UIView {
-    /// nib 加载控件
-    open class func zz_loadFrom(nibName: String) -> UIView? {
-        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).last as? UIView
-    }
     
     /// nib 加载控件
+    ///
+    /// - parameter nibName: nib 文件名
+    ///
+    /// - returns: nib 文件中对应的第一个对象
+    open class func zz_loadFrom(nibName: String) -> UIView? {
+        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
+    }
+    
+    /// nib 加载控件，nib 文件名和View类名一致
     open class func zz_loadFromNib() -> UIView? {
         let nibName = NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
-        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).last as? UIView
+        return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
     }
 }
 
 extension UIView {
-    /// view生成图片
+    /// view生成的对应的图片
     open func zz_snapshotImage() -> UIImage {
         return zz_cropImage(inRect: bounds)
     }
     
-    /// allRect = CGRect.zero 表示bounds
+    
+    /// 在指定区域截取图像
+    ///
+    /// - parameter inRect: 截取图像的区域
+    ///
+    /// - returns: 截取的图像
     open func zz_cropImage(inRect: CGRect) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0)
         UIRectClip(inRect)

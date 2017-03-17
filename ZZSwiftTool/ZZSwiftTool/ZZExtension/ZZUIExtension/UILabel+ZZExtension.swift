@@ -10,6 +10,14 @@ import UIKit
 
 
 extension UILabel {
+    
+    /// 快速穿件Label
+    ///
+    /// - parameter text:      text
+    /// - parameter fontSize:  字体大小
+    /// - parameter textColor: 字体颜色
+    ///
+    /// - returns: Label
     convenience init(text: String = "", fontSize: CGFloat = 12, textColor: UIColor? = UIColor.darkGray) {
         self.init()
         

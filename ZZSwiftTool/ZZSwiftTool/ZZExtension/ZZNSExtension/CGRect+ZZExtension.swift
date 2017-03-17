@@ -9,18 +9,43 @@
 import UIKit
 
 extension CGSize {
+    
+    /// CGSize 乘法
+    ///
+    /// - parameter size:   参与计算的CGSize
+    /// - parameter factor: 乘数因子
+    ///
+    /// - returns: 乘法计算结果
     static func * (size: CGSize, factor: CGFloat) -> CGSize {
         return CGSize(width: size.width * factor, height: size.height * factor)
     }
     
+    /// CGSize 除法
+    ///
+    /// - parameter size:   参与计算的CGSize
+    /// - parameter factor: 除数因子
+    ///
+    /// - returns: 除法计算结果
     static func / (size: CGSize, factor: CGFloat) -> CGSize {
         return CGSize(width: size.width / factor, height: size.height / factor)
     }
     
+    /// CGSize 加法
+    ///
+    /// - parameter size:   参与计算的CGSize
+    /// - parameter factor: 加数因子
+    ///
+    /// - returns: 加法计算结果
     static func + (size: CGSize, factor: CGFloat) -> CGSize {
         return CGSize(width: size.width + factor, height: size.height + factor)
     }
     
+    /// CGSize 减法
+    ///
+    /// - parameter size:   参与计算的CGSize
+    /// - parameter factor: 减数因子
+    ///
+    /// - returns: 减法计算结果
     static func - (size: CGSize, factor: CGFloat) -> CGSize {
         return CGSize(width: size.width - factor, height: size.height - factor)
     }

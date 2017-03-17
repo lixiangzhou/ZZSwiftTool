@@ -9,8 +9,25 @@
 import UIKit
 
 extension UIButton {
+    
+    /// 快速创建按钮
+    ///
+    /// - parameter title:                        title
+    /// - parameter fontSize:                    字体大小
+    /// - parameter titleColor:                   字体颜色
+    /// - parameter imageName:                    图片名
+    /// - parameter hilightedImageName:           高亮图片名
+    /// - parameter selectedImageName:            选中图片名
+    /// - parameter backgroundImageName:          背景图名
+    /// - parameter hilightedBackgroundImageName: 高亮背景图名
+    /// - parameter selectedBackgroundImageName:  选中背景图名
+    /// - parameter backgroundColor:              背景色
+    /// - parameter target:                       target
+    /// - parameter action:                       action
+    ///
+    /// - returns: <#return value description#>
     convenience init(title: String? = nil,
-                     titleSize: CGFloat = 12,
+                     fontSize: CGFloat = 12,
                      titleColor: UIColor = UIColor.darkText,
                      imageName: String? = nil,
                      hilightedImageName: String? = nil,
@@ -26,7 +43,7 @@ extension UIButton {
         
         setTitle(title, for: .normal)
         
-        titleLabel?.font = UIFont.systemFont(ofSize: titleSize)
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor
         

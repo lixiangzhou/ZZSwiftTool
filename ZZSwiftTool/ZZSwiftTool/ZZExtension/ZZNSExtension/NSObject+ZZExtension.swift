@@ -10,6 +10,12 @@ import Foundation
 
 
 extension NSObject {
+    
+    /// 快速字典转模型（使用系统的方式）
+    ///
+    /// - parameter dict: 属性 和 属性值 字典
+    ///
+    /// - returns: 模型
     convenience init(dict: [String: Any]) {
         self.init()
         setValuesForKeys(dict)
@@ -18,12 +24,24 @@ extension NSObject {
 
 extension NSObject {
     
+    
+    /// 快速字典转模型（使用系统的方式）
+    ///
+    /// - parameter dict: 属性 和 属性值 字典
+    ///
+    /// - returns: 模型
     open class func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
         let model = self.init()
         model.setValuesForKeys(dict)
         return model
     }
     
+    
+    /// 快速字典转模型（使用系统的方式）
+    ///
+    /// - parameter dictArray: 需要转模型的字典数组
+    ///
+    /// - returns: 转成功的模型数组
     open class func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
         var models = [AnyObject]()
         
@@ -35,6 +53,8 @@ extension NSObject {
         return models
     }
     
+    
+    /// 对象的 属性 和 属性值
     open var zz_peopertyValues: [String: Any]? {
         
         var propertyValues = [String : Any]()
@@ -50,6 +70,7 @@ extension NSObject {
         return propertyValues.count == 0 ? nil : propertyValues
     }
     
+    /// 对象的所有属性
     open var zz_properties: [String]? {
         var count: UInt32 = 0
         
@@ -76,6 +97,7 @@ extension NSObject {
     }
     
     
+    /// 打印对象的所有属性
     open func zz_printPeopertyValues() {
         guard let peopertyValues = zz_peopertyValues else{
             print("\(type(of: self)) 未找到属性值对")

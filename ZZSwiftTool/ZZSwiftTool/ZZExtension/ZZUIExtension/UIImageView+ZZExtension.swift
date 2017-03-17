@@ -16,6 +16,14 @@ enum UIImageViewCircleMode {
 private var cachedImage = [String: UIImage]()
 
 extension UIImageView {
+    
+    /// 创建一个可以设置中心原图的UIImageView
+    ///
+    /// - parameter frame:     frame
+    /// - parameter image:     显示的图片
+    /// - parameter isCircle:  是否圆形
+    /// - parameter backColor: 背景色
+    /// - parameter mode:      显示模式：drawing 异步回执模式；doubleImage 双图模式
     convenience init(frame: CGRect, image: UIImage?, isCircle: Bool = false, backColor: UIColor? = UIColor.white, mode: UIImageViewCircleMode = .doubleImage) {
         self.init(frame: frame)
         

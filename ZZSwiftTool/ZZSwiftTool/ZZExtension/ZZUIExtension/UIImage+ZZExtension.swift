@@ -8,11 +8,16 @@
 
 import UIKit
 
-// 用于缓存圆形边框
+/// 用于缓存圆形边框
 private var cacheImageBg = [String: UIImage]()
 
 extension UIImage {
+    
     /// 截取图片的一部分
+    ///
+    /// - parameter inRect: 指定截取图片的区域
+    ///
+    /// - returns: 截取的图片
     open func zz_crop(inRect: CGRect) -> UIImage? {
         let scale = UIScreen.zz_scale
         let dotRect = CGRect(x: inRect.zz_x * scale, y: inRect.zz_y * scale, width: inRect.width * scale, height: inRect.height * scale)
@@ -24,6 +29,13 @@ extension UIImage {
         return UIImage(cgImage: cgimg, scale: scale, orientation: .up)
     }
     
+    
+    /// 根据颜色生成指定大小的方图
+    ///
+    /// - parameter color:     图片颜色
+    /// - parameter imageSize: 图片大小
+    ///
+    /// - returns: 生成的图片
     open class func zz_imageWithColor(color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: imageSize, height: imageSize), false, 0.0)
@@ -38,7 +50,13 @@ extension UIImage {
         return result
     }
     
-    /// 异步绘制图片
+    
+    /// 异步回执图片，主线程返回图片
+    ///
+    /// - parameter size:      图片的大小
+    /// - parameter isCircle:  是否圆形图
+    /// - parameter backColor: 图片的北京色
+    /// - parameter finished:  回调返回图片的闭包
     open func zz_asyncDrawImage(size: CGSize, isCircle: Bool = false, backColor: UIColor? = UIColor.white, finished: @escaping (_ image: UIImage) -> ()) {
         DispatchQueue.global().async {
             
@@ -70,7 +88,13 @@ extension UIImage {
         }
     }
     
-    /// 中间透明圆的方图
+    
+    /// 根据指定大小和边部颜色生成一张中间是透明圆形的图片
+    ///
+    /// - parameter size:      图片大小，根据该大小设置中间
+    /// - parameter backColor: 透明圆形与矩形四边之间的颜色
+    ///
+    /// - returns: 中间是透明圆形的图片
     open class func zz_clearCircleImageInSize(size: CGSize, backColor: UIColor? = UIColor.white) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         
@@ -85,7 +109,6 @@ extension UIImage {
         path.addClip()
         UIColor.clear.setFill()
         UIRectFill(rect)
-        
         
         let result = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()

@@ -9,19 +9,22 @@
 import UIKit
 
 extension UIScreen {
-    
+    /// 屏幕高度
     class open var zz_height: CGFloat {
         return UIScreen.main.bounds.height
     }
     
+    /// 屏幕宽度
     class open var zz_width: CGFloat {
         return UIScreen.main.bounds.width
     }
     
+    /// 屏幕的 scale
     class open var zz_scale: CGFloat {
         return UIScreen.main.scale
     }
     
+    /// 屏幕亮度
     class open var zz_brightness: CGFloat {
         set {
             UIScreen.main.brightness = newValue
