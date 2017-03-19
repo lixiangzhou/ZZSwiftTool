@@ -39,7 +39,7 @@ extension UIImageView {
             var corverImg = cachedImage[key]
             
             if corverImg == nil && isCircle {
-                corverImg = UIImage.zz_clearCircleImageInSize(size: size, backColor: backColor)
+                corverImg = UIImage.zz_clearCircleImage(inSize: size, backColor: backColor)
             }
             
             self.image = image

@@ -18,9 +18,9 @@ extension UIImage {
     /// - parameter inRect: 指定截取图片的区域
     ///
     /// - returns: 截取的图片
-    open func zz_crop(inRect: CGRect) -> UIImage? {
+    open func zz_crop(inRect rect: CGRect) -> UIImage? {
         let scale = UIScreen.zz_scale
-        let dotRect = CGRect(x: inRect.zz_x * scale, y: inRect.zz_y * scale, width: inRect.width * scale, height: inRect.height * scale)
+        let dotRect = CGRect(x: rect.zz_x * scale, y: rect.zz_y * scale, width: rect.width * scale, height: rect.height * scale)
         
         guard let cgimg = cgImage?.cropping(to: dotRect) else {
             return nil
@@ -36,7 +36,7 @@ extension UIImage {
     /// - parameter imageSize: 图片大小
     ///
     /// - returns: 生成的图片
-    open class func zz_imageWithColor(color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
+    open class func zz_image(withColor color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: imageSize, height: imageSize), false, 0.0)
         
@@ -68,7 +68,7 @@ extension UIImage {
             
             if backImg == nil && isCircle {
                 
-                backImg = UIImage.zz_clearCircleImageInSize(size: size)
+                backImg = UIImage.zz_clearCircleImage(inSize: size)
                 
                 cacheImageBg[key] = backImg
             }
@@ -95,7 +95,7 @@ extension UIImage {
     /// - parameter backColor: 透明圆形与矩形四边之间的颜色
     ///
     /// - returns: 中间是透明圆形的图片
-    open class func zz_clearCircleImageInSize(size: CGSize, backColor: UIColor? = UIColor.white) -> UIImage {
+    open class func zz_clearCircleImage(inSize size: CGSize, backColor: UIColor? = UIColor.white) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         
         let rect = CGRect(origin: CGPoint.zero, size: size)

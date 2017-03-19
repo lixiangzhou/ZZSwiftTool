@@ -15,7 +15,7 @@ extension Date {
     /// - parameter format: 时间格式
     ///
     /// - returns: 指定格式的时间字符串
-    public func zz_stringWithDateFormat(format: String) -> String {
+    public func zz_string(withDateFormat format: String) -> String {
         zz_dateFormatter.dateFormat = format
         return zz_dateFormatter.string(from: self)
     }
