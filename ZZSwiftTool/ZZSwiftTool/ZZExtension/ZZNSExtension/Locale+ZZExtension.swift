@@ -20,7 +20,7 @@ extension Locale {
     /// - returns: 对应国家的国际化值
     ///            如果 identifier 对应的国际化文件或bundle不存在，value 非空 返回 value，否则返回 "";
     ///            如果key为nil 或未找到，value 非空 返回 value，否则返回 "";
-    static func localizedString(withIdentifier identifier: String, forKey key: String, value: String? = nil, table: String? = nil) -> String {
+    static func zz_localizedString(withIdentifier identifier: String, forKey key: String, value: String? = nil, table: String? = nil) -> String {
         guard let path = Bundle.main.path(forResource: identifier + ".lproj", ofType: nil) else {
             print("\(identifier) 对应的bundle 的路径不存在")
             return value ?? ""
