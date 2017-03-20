@@ -9,7 +9,7 @@
 import UIKit
 
 /// 可以调整图片位置的按钮
-class ZZImagePositionButton: UIButton {
+open class ZZImagePositionButton: UIButton {
     
     enum ZZImagePosition {
         case left, right
@@ -22,7 +22,7 @@ class ZZImagePositionButton: UIButton {
     private var rightPadding: CGFloat = 0
     private var imgPosition: ZZImagePosition = .none
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         if imgPosition == .left {

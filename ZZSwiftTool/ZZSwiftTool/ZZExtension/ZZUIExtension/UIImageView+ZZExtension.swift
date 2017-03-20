@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum UIImageViewCircleMode {
+public enum UIImageViewCircleMode {
     case drawing, doubleImage
 }
 
