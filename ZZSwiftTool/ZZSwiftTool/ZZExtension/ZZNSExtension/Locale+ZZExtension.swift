@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Locale {
+public extension Locale {
     
     /// 国际化语言
     ///

@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     /// view所在的UIViewController
-    open var zz_controller: UIViewController? {
+    var zz_controller: UIViewController? {
         var responder = next
         while responder != nil {
             if responder!.isKind(of: UIViewController.self) {
@@ -24,21 +24,21 @@ extension UIView {
     
     
     /// 移除所有子控件
-    open func zz_removeAllSubviews() {
+    func zz_removeAllSubviews() {
         for subview in subviews {
             subview.removeFromSuperview()
         }
     }
 }
 
-extension UIView {
+public extension UIView {
     /// 设置圆形
-    open  func zz_setCircle() {
+     func zz_setCircle() {
         zz_setCorner(radius: min(bounds.width, bounds.height) * 0.5, masksToBounds: true)
     }
     
     /// 设置圆角
-    open func zz_setCorner(radius: CGFloat, masksToBounds: Bool) {
+    func zz_setCorner(radius: CGFloat, masksToBounds: Bool) {
         layer.cornerRadius = radius
         layer.masksToBounds = masksToBounds
     }
@@ -48,21 +48,22 @@ extension UIView {
     ///
     /// - parameter color: 边框颜色
     /// - parameter width: 边框宽度
-    open func zz_setBorder(color: UIColor, width: CGFloat) {
+    func zz_setBorder(color: UIColor, width: CGFloat) {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
 }
 
-extension UIView {
+public extension UIView {
     
     /// 添加子控件
     ///
     /// - parameter subview: 子控件
     ///
     /// - returns: 添加的子控件
-    open func zz_add(subview: UIView) -> UIView {
-        return zz_add(subview: subview, frame: CGRect.zero)
+    func zz_add(subview: UIView) -> UIView {
+        addSubview(subview)
+        return subview
     }
     
     
@@ -72,7 +73,7 @@ extension UIView {
     /// - parameter frame:   子控件的frame
     ///
     /// - returns: 添加的子控件
-    open func zz_add(subview: UIView, frame: CGRect) -> UIView {
+    func zz_add(subview: UIView, frame: CGRect) -> UIView {
         addSubview(subview)
         subview.frame = frame
         return subview
@@ -80,27 +81,27 @@ extension UIView {
     
 }
 
-extension UIView {
+public extension UIView {
     
     /// nib 加载控件
     ///
     /// - parameter nibName: nib 文件名
     ///
     /// - returns: nib 文件中对应的第一个对象
-    open class func zz_loadFrom(nibName: String) -> UIView? {
+    class func zz_loadFrom(nibName: String) -> UIView? {
         return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
     }
     
     /// nib 加载控件，nib 文件名和View类名一致
-    open class func zz_loadFromNib() -> UIView? {
+    class func zz_loadFromNib() -> UIView? {
         let nibName = NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
         return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
     }
 }
 
-extension UIView {
+public extension UIView {
     /// view生成的对应的图片
-    open func zz_snapshotImage() -> UIImage {
+    func zz_snapshotImage() -> UIImage {
         return zz_cropImage(inRect: bounds)
     }
     
@@ -110,7 +111,7 @@ extension UIView {
     /// - parameter inRect: 截取图像的区域
     ///
     /// - returns: 截取的图像
-    open func zz_cropImage(inRect: CGRect) -> UIImage {
+    func zz_cropImage(inRect: CGRect) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0)
         UIRectClip(inRect)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -120,7 +121,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     var zz_x: CGFloat {
         get {
             return frame.origin.x

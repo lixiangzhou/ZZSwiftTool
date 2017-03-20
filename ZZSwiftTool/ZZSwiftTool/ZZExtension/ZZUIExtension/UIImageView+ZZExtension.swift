@@ -15,7 +15,7 @@ enum UIImageViewCircleMode {
 /// 缓存图片
 private var cachedImage = [String: UIImage]()
 
-extension UIImageView {
+public extension UIImageView {
     
     /// 创建一个可以设置中心原图的UIImageView
     ///

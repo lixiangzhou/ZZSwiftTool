@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     
     /// 返回指定格式的时间字符串
     ///

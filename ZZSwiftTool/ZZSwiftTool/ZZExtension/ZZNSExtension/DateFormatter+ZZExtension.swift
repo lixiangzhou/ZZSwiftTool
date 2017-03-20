@@ -8,4 +8,4 @@
 
 import Foundation
 
-let zz_dateFormatter = DateFormatter()
+public let zz_dateFormatter = DateFormatter()

@@ -11,14 +11,14 @@ import UIKit
 /// 用于缓存圆形边框
 private var cacheImageBg = [String: UIImage]()
 
-extension UIImage {
+public extension UIImage {
     
     /// 截取图片的一部分
     ///
     /// - parameter inRect: 指定截取图片的区域
     ///
     /// - returns: 截取的图片
-    open func zz_crop(inRect rect: CGRect) -> UIImage? {
+    func zz_crop(inRect rect: CGRect) -> UIImage? {
         let scale = UIScreen.zz_scale
         let dotRect = CGRect(x: rect.zz_x * scale, y: rect.zz_y * scale, width: rect.width * scale, height: rect.height * scale)
         
@@ -36,7 +36,7 @@ extension UIImage {
     /// - parameter imageSize: 图片大小
     ///
     /// - returns: 生成的图片
-    open class func zz_image(withColor color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
+    class func zz_image(withColor color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: imageSize, height: imageSize), false, 0.0)
         
@@ -57,7 +57,7 @@ extension UIImage {
     /// - parameter isCircle:  是否圆形图
     /// - parameter backColor: 图片的北京色
     /// - parameter finished:  回调返回图片的闭包
-    open func zz_asyncDrawImage(size: CGSize, isCircle: Bool = false, backColor: UIColor? = UIColor.white, finished: @escaping (_ image: UIImage) -> ()) {
+    func zz_asyncDrawImage(size: CGSize, isCircle: Bool = false, backColor: UIColor? = UIColor.white, finished: @escaping (_ image: UIImage) -> ()) {
         DispatchQueue.global().async {
             
             let key = "" + size.width.description + size.height.description + (backColor != nil ? backColor!.description : UIColor.clear.description)
@@ -95,7 +95,7 @@ extension UIImage {
     /// - parameter backColor: 透明圆形与矩形四边之间的颜色
     ///
     /// - returns: 中间是透明圆形的图片
-    open class func zz_clearCircleImage(inSize size: CGSize, backColor: UIColor? = UIColor.white) -> UIImage {
+    class func zz_clearCircleImage(inSize size: CGSize, backColor: UIColor? = UIColor.white) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         
         let rect = CGRect(origin: CGPoint.zero, size: size)

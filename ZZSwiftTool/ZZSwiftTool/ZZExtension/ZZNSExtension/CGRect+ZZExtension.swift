@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGSize {
+public extension CGSize {
     
     /// CGSize 乘法
     ///
@@ -52,7 +52,7 @@ extension CGSize {
 }
 
 
-extension CGRect {
+public extension CGRect {
     var zz_x: CGFloat {
         return origin.x
     }

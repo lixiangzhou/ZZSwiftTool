@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIAlertController {
+public extension UIAlertController {
     
     /// 快捷弹窗，Alert 样式或者 ActionSheet样式
     ///
@@ -25,7 +25,7 @@ extension UIAlertController {
     /// - parameter completion:     弹窗消失执行的操作
     ///
     /// - returns: 弹窗对象 UIAlertController
-    open class func zz_show(fromController: UIViewController, style: UIAlertControllerStyle = .alert, title: String? = nil, message: String? = nil,
+    class func zz_show(fromController: UIViewController, style: UIAlertControllerStyle = .alert, title: String? = nil, message: String? = nil,
                             action1Title: String, action1Style: UIAlertActionStyle = .default, action1Handler:((UIAlertAction) -> Void)? = nil,
                             action2Title: String? = nil, action2Style: UIAlertActionStyle = .default, action2Handler: (@escaping(UIAlertAction) -> Void), completion: (() -> Void)? = nil) -> UIAlertController {
         

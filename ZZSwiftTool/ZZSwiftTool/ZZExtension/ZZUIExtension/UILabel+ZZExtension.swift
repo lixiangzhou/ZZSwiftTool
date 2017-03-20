@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UILabel {
+public extension UILabel {
     
     /// 快速穿件Label
     ///

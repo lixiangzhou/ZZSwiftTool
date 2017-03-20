@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension NSObject {
+public extension NSObject {
     
     /// 快速字典转模型（使用系统的方式）
     ///
@@ -22,7 +22,7 @@ extension NSObject {
     }
 }
 
-extension NSObject {
+public extension NSObject {
     
     
     /// 快速字典转模型（使用系统的方式）
@@ -30,7 +30,7 @@ extension NSObject {
     /// - parameter dict: 属性 和 属性值 字典
     ///
     /// - returns: 模型
-    open class func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
+    class func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
         let model = self.init()
         model.setValuesForKeys(dict)
         return model
@@ -42,7 +42,7 @@ extension NSObject {
     /// - parameter dictArray: 需要转模型的字典数组
     ///
     /// - returns: 转成功的模型数组
-    open class func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
+    class func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
         var models = [AnyObject]()
         
         for dict in dictArray {
@@ -55,7 +55,7 @@ extension NSObject {
     
     
     /// 对象的 属性 和 属性值
-    open var zz_peopertyValues: [String: Any]? {
+    var zz_peopertyValues: [String: Any]? {
         
         var propertyValues = [String : Any]()
         guard let properties = zz_properties else {
@@ -71,7 +71,7 @@ extension NSObject {
     }
     
     /// 对象的所有属性
-    open var zz_properties: [String]? {
+    var zz_properties: [String]? {
         var count: UInt32 = 0
         
         guard let properties = class_copyPropertyList(type(of: self), &count) else {
@@ -98,7 +98,7 @@ extension NSObject {
     
     
     /// 打印对象的所有属性
-    open func zz_printPeopertyValues() {
+    func zz_printPeopertyValues() {
         guard let peopertyValues = zz_peopertyValues else{
             print("\(type(of: self)) 未找到属性值对")
             return

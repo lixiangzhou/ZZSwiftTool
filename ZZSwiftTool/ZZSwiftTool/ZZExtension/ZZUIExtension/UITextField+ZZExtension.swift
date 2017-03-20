@@ -8,11 +8,11 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
     
     
     /// 选中所有文字
-    open func zz_selectAllText() {
+    func zz_selectAllText() {
         guard let range = textRange(from: beginningOfDocument, to: endOfDocument) else {
             return
         }
@@ -23,7 +23,7 @@ extension UITextField {
     /// 选中指定范围的文字
     ///
     /// - parameter selectedRange: 指定的范围
-    open func zz_set(selectedRange range: NSRange) {
+    func zz_set(selectedRange range: NSRange) {
         
         guard let start = position(from: beginningOfDocument, offset: range.location),
             let end = position(from: beginningOfDocument, offset: NSMaxRange(range)) else {

@@ -8,4 +8,4 @@
 
 import Foundation
 
-let zz_calendar = Calendar.current
+public let zz_calendar = Calendar.current
