@@ -14,21 +14,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(UIApplication.shared.zz_appId)
-        print(UIApplication.shared.zz_appName)
-        print(UIApplication.shared.zz_appVersion)
-        print(UIApplication.shared.zz_appBuildVersion)
-        
-        
-        print(UIApplication.shared.zz_documentURL)
-        print(UIApplication.shared.zz_documentPath)
-        
-        print(zz_application.zz_cachesURL)
-        print(zz_application.zz_cachesPath)
-        
-        print(zz_application.zz_libraryURL)
-        print(zz_application.zz_libraryPath)
-        
+        print(NSUserName())
+        print(NSFullUserName())
+        print(NSOpenStepRootDirectory())
+        print(NSHomeDirectory())
+        print(NSTemporaryDirectory())
+        print(zz_filePath(with: .documentDirectory, fileName: "test.txt"))
+        print(zz_filePath(with: .cachesDirectory, fileName: "test.txt"))
+        print(zz_filePath(with: .libraryDirectory, fileName: "test.txt"))
+        print(zz_filePath(with: .tempDirectory, fileName: "test.txt"))
         
     }
 
