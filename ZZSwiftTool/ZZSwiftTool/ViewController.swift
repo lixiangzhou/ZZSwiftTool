@@ -15,12 +15,43 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         let date = Date()
-        print(date.debugDescription)
-        let date2 = date.zz_date(byAdding: .day, value: 5)
-        print(date2)
-        let interval = zz_calendar.dateIntervalOfWeekend(containing: date2!)
         
-        print(interval)
+        print(zz_calendar.date(bySettingHour: 10, minute: 10, second: 10, of: date)?.zz_string())
+        print(zz_calendar.date(bySetting: .day, value: 2, of: date)?.zz_string())
+        date.zz_date(byAdding: <#T##Calendar.Component#>, value: <#T##Int#>)
+        
+//        let newDate = date.zz_date(byAdding: .month, value: -1)
+//        var datecomponents = DateComponents()
+//        datecomponents.month = 4
+//        datecomponents.day = 2
+//        let newDate = zz_calendar.date(byAdding: datecomponents, to: date, wrappingComponents: true)
+//        var components = DateComponents()
+//        components.day = 31
+////        components.hour = 3
+//        
+//        if let newDate = newDate {
+//            print(newDate.zz_string())
+//            print(zz_calendar.nextDate(after: newDate, matching: components, matchingPolicy: .strict, repeatedTimePolicy: .first, direction: .forward)?.zz_string() ?? "")
+        
+//        }
+//        zz_calendar.zz_enumerateDates(fromDate: date, matchingComponents: components) { (date, _, _) in
+//            print(date?.zz_string())
+//        }
+        
+        
+//        print(zz_calendar.nextDate(after: date, matching: components, matchingPolicy: .strict))
+        
+        
+//        print(date.debugDescription)
+//        let date2 = date.zz_date(byAdding: .day, value: -2)
+//        print(date2)
+//        let interval = date2?.zz_dateIntervalOfWeekend()
+//        
+//        print(TimeZone.autoupdatingCurrent)
+//        
+//        print(zz_calendar.date(bySettingHour: 10, minute: 10, second: 10, of: date)?.zz_string())
+//        
+//        print(interval)
         
         
 //        var date2 = date.zz_date(byAdding: .day, value: -1)
