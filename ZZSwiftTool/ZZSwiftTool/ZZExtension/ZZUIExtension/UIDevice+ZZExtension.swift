@@ -168,4 +168,30 @@ public extension UIDevice {
     var zz_uuidString: String? {
         return zz_device.identifierForVendor?.uuidString
     }
+    
+    /// 获取磁盘大小(字节)，获取失败返回-1
+    var zz_systemSize: Double {
+        guard let attr = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else {
+            return -1
+        }
+        
+        guard let space = attr[FileAttributeKey.systemSize] as? Double else {
+            return -1
+        }
+        
+        return space
+    }
+    
+    /// 获取磁盘可用大小(字节)，获取失败返回-1
+    var zz_systemFreeSize: Double {
+        guard let attr = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else {
+            return -1
+        }
+        
+        guard let space = attr[FileAttributeKey.systemFreeSize] as? Double else {
+            return -1
+        }
+        
+        return space
+    }
 }
