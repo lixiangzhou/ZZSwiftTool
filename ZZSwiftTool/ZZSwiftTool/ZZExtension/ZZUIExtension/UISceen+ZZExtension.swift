@@ -8,30 +8,32 @@
 
 import UIKit
 
+public let zz_screen = UIScreen.main
+
 public extension UIScreen {
     /// 屏幕高度
-    class var zz_height: CGFloat {
-        return UIScreen.main.bounds.height
+    static var zz_height: CGFloat {
+        return zz_screen.bounds.height
     }
     
     /// 屏幕宽度
-    class var zz_width: CGFloat {
-        return UIScreen.main.bounds.width
+    static var zz_width: CGFloat {
+        return zz_screen.bounds.width
     }
     
-    /// 屏幕的 scale
-    class var zz_scale: CGFloat {
-        return UIScreen.main.scale
+    /// 设备的 scale
+    static var zz_scale: CGFloat {
+        return zz_screen.scale
     }
     
     /// 屏幕亮度
-    class var zz_brightness: CGFloat {
+    static var zz_brightness: CGFloat {
         set {
-            UIScreen.main.brightness = newValue
+            zz_screen.brightness = newValue
         }
         
         get {
-            return UIScreen.main.brightness
+            return zz_screen.brightness
         }
     }
 }

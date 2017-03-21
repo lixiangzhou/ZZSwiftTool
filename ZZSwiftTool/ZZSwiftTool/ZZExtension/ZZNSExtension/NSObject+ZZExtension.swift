@@ -30,7 +30,7 @@ public extension NSObject {
     /// - parameter dict: 属性 和 属性值 字典
     ///
     /// - returns: 模型
-    class func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
+    static func zz_toModel(dict: [String: AnyObject]) -> AnyObject {
         let model = self.init()
         model.setValuesForKeys(dict)
         return model
@@ -42,7 +42,7 @@ public extension NSObject {
     /// - parameter dictArray: 需要转模型的字典数组
     ///
     /// - returns: 转成功的模型数组
-    class func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
+    static func zz_toModelArray(dictArray: [[String: AnyObject]]) -> [AnyObject]? {
         var models = [AnyObject]()
         
         for dict in dictArray {

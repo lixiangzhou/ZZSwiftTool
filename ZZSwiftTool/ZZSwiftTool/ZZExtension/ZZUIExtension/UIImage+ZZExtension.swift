@@ -36,7 +36,7 @@ public extension UIImage {
     /// - parameter imageSize: 图片大小
     ///
     /// - returns: 生成的图片
-    class func zz_image(withColor color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
+    static func zz_image(withColor color: UIColor, imageSize: CGFloat = 0.5) -> UIImage {
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: imageSize, height: imageSize), false, 0.0)
         

@@ -30,7 +30,7 @@ public extension UIColor {
     }
     
     /// 随机色
-    class var zz_random: UIColor {
+    static var zz_random: UIColor {
         let red = arc4random() % 256
         let green = arc4random() % 256
         let blue = arc4random() % 256

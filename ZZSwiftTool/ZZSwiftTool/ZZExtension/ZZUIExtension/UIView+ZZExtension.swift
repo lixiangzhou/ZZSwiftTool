@@ -88,12 +88,12 @@ public extension UIView {
     /// - parameter nibName: nib 文件名
     ///
     /// - returns: nib 文件中对应的第一个对象
-    class func zz_loadFrom(nibName: String) -> UIView? {
+    static func zz_loadFrom(nibName: String) -> UIView? {
         return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
     }
     
     /// nib 加载控件，nib 文件名和View类名一致
-    class func zz_loadFromNib() -> UIView? {
+    static func zz_loadFromNib() -> UIView? {
         let nibName = NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
         return UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
     }
