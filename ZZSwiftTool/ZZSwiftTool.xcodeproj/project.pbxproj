@@ -197,7 +197,7 @@
 				TargetAttributes = {
 					9773D33A1E724D4000743C3F = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = N33WL6ABHF;
+						DevelopmentTeam = 5GU76RLMRW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -387,7 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N33WL6ABHF;
+				DEVELOPMENT_TEAM = 5GU76RLMRW;
 				INFOPLIST_FILE = ZZSwiftTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zz.ZZSwiftTool;
@@ -400,7 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N33WL6ABHF;
+				DEVELOPMENT_TEAM = 5GU76RLMRW;
 				INFOPLIST_FILE = ZZSwiftTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zz.ZZSwiftTool;
