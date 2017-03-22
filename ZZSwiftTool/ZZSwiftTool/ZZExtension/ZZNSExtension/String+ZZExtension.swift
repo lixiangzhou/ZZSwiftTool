@@ -9,6 +9,13 @@
 import UIKit
 
 public extension String {
+    /// 去掉空白字符串
+    var zz_trim: String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+public extension String {
     
     /// 根据格式获取字符串的Date对象
     ///
